@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+    />
     <title>Image search</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div class="block">
       <form class="images-form">
-        <input type="text" name="query" />
-        <button type="submit">Search</button>
+        <input class="images-form-input" type="text" name="query" />
+        <button class="images-form-button" type="submit">Search</button>
       </form>
-      <div
-        class="hero-container fb images-container"
-        style="justify-content: start"
-      ></div>
+      <div class="images-container">
+        <ul class="gallery"></ul>
+      </div>
     </div>
 
     <script type="module" src="./js/pixabay-api.js"></script>
