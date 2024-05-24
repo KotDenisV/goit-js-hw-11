@@ -44,10 +44,10 @@ function searchImages(query) {
     const url = `${baseUrl}?${params}`;
 
     return fetch(url).then(response => {
-        if(!response.ok) {
+        if (!response.ok) {
           throw new Error(response.statusText)
         }
-        response.json()
+        return response.json()
     });
 }
 
