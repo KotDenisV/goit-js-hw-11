@@ -12,16 +12,18 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="block">
-      <form class="images-form">
-        <input class="images-form-input" type="text" name="query" />
-        <button class="images-form-button" type="submit">Search</button>
-      </form>
-      <div class="images-container">
-        <ul class="gallery"></ul>
-      </div>
-    </div>
+    <form class="images-form">
+      <input
+        class="images-form-input"
+        placeholder="Search images..."
+        type="text"
+        name="query"
+      />
+      <button class="images-form-button" type="submit">Search</button>
+    </form>
 
-    <script type="module" src="./js/pixabay-api.js"></script>
+    <ul class="gallery"></ul>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
