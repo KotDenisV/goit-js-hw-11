@@ -1,6 +1,3 @@
-
-
-
 function searchImages(query) {
     const baseUrl = 'https://pixabay.com/api/';
     const params = new URLSearchParams({

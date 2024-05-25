@@ -14,19 +14,19 @@ function imageTemplate(image) {
                <div class="property-container">
                  <div class="property">
                    Likes
-                   <span class="value">${image.likes}</span>
+                   <span class="keys">${image.likes}</span>
                  </div>
 	             <div class ="property">
                    Views
-                   <span class="value">${image.views}</span>
+                   <span class="keys">${image.views}</span>
                  </div>
 	             <div class ="property">
                    Comments
-                   <span class="value">${image.comments}</span>
+                   <span class="keys">${image.comments}</span>
                  </div>
 	             <div class ="property">
                    Downloads
-                   <span class="value">${image.downloads}</span>
+                   <span class="keys">${image.downloads}</span>
                  </div>
                </div>    
           </li>`;
@@ -45,4 +45,4 @@ function imagesTemplate(arr) {
   return arr.map(imageTemplate).join('');
 }
 
-export { imageTemplate, imagesTemplate }
+export { imagesTemplate }
