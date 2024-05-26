@@ -30,8 +30,8 @@ function handleSubmit(event) {
       lightbox.refresh();
       loader.style.display = 'none';
     })
-    .catch(err => {
-      console.log(err);
+    .catch(error => {
+      console.log(error);
       loader.style.display = 'none';
     });
    
