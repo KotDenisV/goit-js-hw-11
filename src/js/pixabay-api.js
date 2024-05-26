@@ -1,3 +1,6 @@
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
 function searchImages(query) {
     const baseUrl = 'https://pixabay.com/api/';
     const params = new URLSearchParams({
@@ -7,14 +10,30 @@ function searchImages(query) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
-  });
+    });
     const url = `${baseUrl}?${params}`;
 
-    return fetch(url).then(response => {
+    return fetch(url)
+      .then(response => {
         if (!response.ok) {
           throw new Error(response.statusText)
         }
         return response.json()
+      })
+      .then(data => {
+      if (data.hits.length === 0) {
+        iziToast.show({
+          position: 'topRight',
+          backgroundColor: '#EF4040',
+          message: 'Sorry, there are no images matching your search query. Please try again!',
+          messageColor: '#FAFAFB',
+        });
+      } else {
+        return data;
+      }
+    })
+    .catch(error => {
+      console.log('Fetch error:', error);
     });
 }
 

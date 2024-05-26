@@ -1,6 +1,3 @@
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
-
 function imageTemplate(image) {
     return `<li class="gallery-item">
                <div class="gallery-image-container">
@@ -33,16 +30,7 @@ function imageTemplate(image) {
 }
 
 function imagesTemplate(arr) {
-  if (arr.length === 0) {
-        iziToast.show({
-          position: 'topRight',
-          backgroundColor: '#EF4040',
-          message:
-            'Sorry, there are no images matching your search query. Please try again!',
-          messageColor: '#FAFAFB',
-        });
-    }
-  return arr.map(imageTemplate).join('');
+    return arr.map(imageTemplate).join('');
 }
 
 export { imagesTemplate }

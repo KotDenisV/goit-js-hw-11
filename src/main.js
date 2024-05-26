@@ -15,8 +15,7 @@ form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-    if (request.value.trim() === '') {
-      alert('Please enter a search query');
+    if (request.value.trim() === '') {      
       return; 
   }
 

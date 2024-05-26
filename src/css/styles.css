@@ -126,15 +126,17 @@ body {
 }
 
 .loader {
+  display: none;
+  margin: 30px auto 10px;
   width: 48px;
   height: 48px;
-  border: 3px solid #fff;
+  border: 3px solid #2e2f42;
   border-bottom-color: transparent;
   border-radius: 50%;
-  display: inline-block;
   position: relative;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+  color: #2e2f42;
 }
 .loader::after {
   content: '';
@@ -143,7 +145,7 @@ body {
   left: 20px;
   top: 31px;
   border: 10px solid transparent;
-  border-right-color: #fff;
+  border-right-color: #2e2f42;
   transform: rotate(-40deg);
 }
 
